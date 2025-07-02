@@ -1,0 +1,6 @@
+# Dependencies
+/node_modules
+
+# Configuration
+# This file contains sensitive tokens and should not be committed.
+/config.json

@@ -1,0 +1,13 @@
+{
+  "name": "discord-moderator-bot",
+  "version": "1.0.0",
+  "description": "A Discord bot for automated moderation.",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "discord.js": "^14.11.0"
+  }
+}
