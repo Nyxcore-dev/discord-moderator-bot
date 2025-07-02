@@ -1,6 +1,14 @@
 const { Client, GatewayIntentBits, EmbedBuilder } = require('discord.js');
 const axios = require('axios');
-const { token, ownerId } = require('./config.json');
+// Read secrets from environment variables
+const token = process.env.token;
+const ownerId = process.env.ownerId;
+
+// Exit if secrets are not provided
+if (!token || !ownerId) {
+    console.error('FATAL ERROR: Missing required environment variables (token, ownerId). Please set them in your hosting provider\'s secrets/variables manager.');
+    process.exit(1);
+}
 const { masterRegex, wordMap } = require('./profanity.js');
 
 const client = new Client({
